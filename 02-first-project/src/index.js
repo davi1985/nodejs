@@ -78,7 +78,7 @@ app.get("/statement/date", verifyIfExistsAccountByCPF, (request, response) => {
       statement.created_at.toDateString() ===
       new Date(dateFormat).toDateString()
   );
-  return response.json(statement);
+
   return response.status(200).json({
     statement,
   });
